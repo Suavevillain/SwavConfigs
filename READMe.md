@@ -1,2 +1,1 @@
-#Hello Word
-This is just my config files. Be good to your fellow humans if you ever read this. :)
+I put my Linux config files here. Be well and good to other humans.
