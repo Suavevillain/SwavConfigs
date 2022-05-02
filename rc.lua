@@ -113,7 +113,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("%a %b %d %l:%M%P",15)
+mytextclock = awful.widget.textclock('<span color="#709079" font="vcr osd mono"> %I:%M  | %a %b %d  </span>', 5)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -332,7 +332,7 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
-    -- Dmenu
+    -- Rofi
     awful.key({ modkey },            "r",     function ()
     awful.util.spawn("rofi -show run") end, {description = "run rofi", group = "launcher"}),
 
@@ -344,9 +344,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey },            "v",     function ()
     awful.util.spawn("discord") end, {description = "discord", group = "applications"}),
 
-      -- Thunar File Manager
-    awful.key({ "Control" },            "f",     function ()
-    awful.util.spawn("thunar") end, {description = "thunar", group = "file manager"}),
+      -- Dolphin File Manager
+    awful.key({ "Control" },            "b",     function ()
+    awful.util.spawn("dolphin") end, {description = "dolphin", group = "file manager"}),
 
 
     awful.key({ modkey }, "x",
@@ -608,5 +608,6 @@ awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 beautiful.useless_gap = 5 
 beautiful.gap_single_client = true
 beautiful.notification_icon_size = 30
+
 
 
